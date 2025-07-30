@@ -47,13 +47,7 @@ export default function Component() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/placeholder.svg?height=1080&width=1920"
-            alt="Athlete in motion"
-            fill
-            className="object-cover opacity-60"
-            priority
-          />
+          <Image src="/hero-athlete.png" alt="Athlete in motion" fill className="object-cover opacity-60" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
         </div>
 
@@ -120,37 +114,37 @@ export default function Component() {
                 name: "AeroFlex Pro",
                 price: "$189",
                 category: "Running Shoes",
-                image: "athletic running shoes modern design",
+                image: "/aeroflex-pro.png",
               },
               {
                 name: "PowerLift Elite",
                 price: "$159",
                 category: "Training Gear",
-                image: "premium athletic training equipment",
+                image: "/powerlift-elite.png",
               },
               {
                 name: "FlexMotion Tee",
                 price: "$79",
                 category: "Performance Wear",
-                image: "modern athletic performance shirt",
+                image: "/flexmotion-tee.png",
               },
               {
                 name: "SpeedCore Shorts",
                 price: "$99",
                 category: "Athletic Shorts",
-                image: "high performance athletic shorts",
+                image: "/speedcore-shorts.png",
               },
               {
                 name: "EnduranceMax Jacket",
                 price: "$249",
                 category: "Outerwear",
-                image: "premium athletic jacket sportswear",
+                image: "/endurancemax-jacket.png",
               },
               {
                 name: "GripTech Gloves",
                 price: "$49",
                 category: "Accessories",
-                image: "professional athletic training gloves",
+                image: "/griptech-gloves.png",
               },
             ].map((product, index) => (
               <Card
@@ -159,7 +153,7 @@ export default function Component() {
               >
                 <div className="relative overflow-hidden rounded-t-2xl">
                   <Image
-                    src={`/placeholder.svg?height=300&width=400&query=${product.image}`}
+                    src={`${product.image}`}
                     alt={product.name}
                     width={400}
                     height={300}
@@ -234,7 +228,7 @@ export default function Component() {
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=600&width=500"
+                src="/athletes-training.png"
                 alt="Athletes training"
                 width={500}
                 height={600}
@@ -266,21 +260,21 @@ export default function Component() {
                 role: "Marathon Runner",
                 review: "APEX gear has completely transformed my training. The comfort and performance are unmatched.",
                 rating: 5,
-                image: "professional female marathon runner athlete",
+                image: "/sarah-johnson.png",
               },
               {
                 name: "Mike Chen",
                 role: "CrossFit Athlete",
                 review: "The durability and flexibility of APEX products help me push through the toughest workouts.",
                 rating: 5,
-                image: "professional male crossfit athlete training",
+                image: "/mike-chen.png",
               },
               {
                 name: "Emma Rodriguez",
                 role: "Tennis Pro",
                 review: "Every piece of APEX gear I own has exceeded my expectations. Quality you can feel.",
                 rating: 5,
-                image: "professional female tennis player athlete",
+                image: "/emma-rodriguez.png",
               },
             ].map((review, index) => (
               <Card
@@ -290,7 +284,7 @@ export default function Component() {
                 <CardContent className="p-0">
                   <div className="flex items-center mb-4">
                     <Image
-                      src={`/placeholder.svg?height=60&width=60&query=${review.image}`}
+                      src={`${review.image}`}
                       alt={review.name}
                       width={60}
                       height={60}
